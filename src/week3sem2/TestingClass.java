@@ -25,6 +25,18 @@ public class TestingClass {
 
                        employee1.addHoursWorked(30);
                        System.out.printf("Pay Cheque of employee1 is %s",employee1.getPayCheque());
+                       
+                       CommissionEmployee empl3 = new CommissionEmployee("Harley","Quinn",1233, 
+                                                LocalDate.of(1992, Month.MARCH, 2),10);
+    
+       empl3.addSales(34000);
+       empl3.addSales(1232);
+       System.out.printf("Employee3 is %s%n", empl3);
+       System.out.printf("The employee was born on %s, that was a %s%n",
+                                            empl3.getDateOfBirth(), 
+                                            empl3.getDateOfBirth().getDayOfWeek());
+       System.out.printf("The pay cheque for employee 3 is %s%n", 
+                                                    empl3.getPayCheque());
     }
     
 }
