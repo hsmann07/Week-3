@@ -16,13 +16,15 @@ import java.time.Month;
 public class TestingClass {
     public static void main (String[] args)
     {
-    Employee employee1 = new Employee("Fred","Flintstone",1234,LocalDate.of(1998, Month.MARCH, 14));
-            System.out.printf("The Employee is %s%n",employee1);
+    HourlyEmployee employee1 = new HourlyEmployee("Fred ","Flintstone",1234,LocalDate.of(1998, Month.MARCH, 14),30);
+            System.out.printf("The Employee1 is %s%n",employee1);
                      System.out.printf("The Employee is %s,that was a %s%n",employee1.getDateOfBirth(),employee1.getDateOfBirth().getDayOfWeek());
-    Employee employee2 = new Employee("Harry","Langrian",3343,LocalDate.of(1998, Month.JULY, 04));
-            System.out.printf("The Employee is %s%n",employee2);
+   HourlyEmployee employee2 = new HourlyEmployee("Harry ","Langrian",3343,LocalDate.of(1998, Month.JULY, 04),20);
+            System.out.printf("The Employee2 is %s%n",employee2);
                      System.out.printf("The Employee is %s,that was a %s%n",employee2.getDateOfBirth(),employee2.getDateOfBirth().getDayOfWeek());                 
 
+                       employee1.addHoursWorked(30);
+                       System.out.printf("Pay Cheque of employee1 is %s",employee1.getPayCheque());
     }
     
 }

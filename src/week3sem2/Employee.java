@@ -12,7 +12,7 @@ import java.time.Period;
  *
  * @author MANN
  */
-public class Employee {
+public abstract class Employee {
     private String firstName,lastName;
     private int socialInsuranceNum;
     private LocalDate dateOfBirth;
@@ -63,6 +63,6 @@ public class Employee {
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
-    
+    public abstract PayCheque getPayCheque();
     
 }
